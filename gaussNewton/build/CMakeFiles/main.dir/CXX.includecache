@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/noetic/module/GN/gaussNewton.cc
+iostream
+-
+Eigen/Core
+/home/noetic/module/GN/Eigen/Core
+Eigen/Dense
+/home/noetic/module/GN/Eigen/Dense
+opencv2/opencv.hpp
+/home/noetic/module/GN/opencv2/opencv.hpp
+chrono
+-
+
