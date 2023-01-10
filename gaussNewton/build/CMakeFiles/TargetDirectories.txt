@@ -1,3 +1,0 @@
-/home/noetic/module/GN/build/CMakeFiles/rebuild_cache.dir
-/home/noetic/module/GN/build/CMakeFiles/edit_cache.dir
-/home/noetic/module/GN/build/CMakeFiles/main.dir
