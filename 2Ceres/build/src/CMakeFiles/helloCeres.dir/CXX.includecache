@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/noetic/module/2Ceres/src/1HelloCeres.cc
+iostream
+-
+ceres/ceres.h
+/home/noetic/module/2Ceres/src/ceres/ceres.h
+glog/logging.h
+/home/noetic/module/2Ceres/src/glog/logging.h
+

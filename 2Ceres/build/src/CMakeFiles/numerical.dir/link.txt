@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/numerical.dir/2NumericalD.cc.o  -o numerical  /usr/local/lib/libceres.a -lglog -lglog -llapack -lblas -lgomp -lpthread 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/helloCeres.dir/1HelloCeres.cc.o  -o helloCeres  /usr/local/lib/libceres.a -lglog -lglog -llapack -lblas -lgomp -lpthread 
