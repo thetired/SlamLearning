@@ -6,8 +6,8 @@
                 "${workspaceFolder}/**",
                 "/usr/include/eigen3",
                 "/usr/include/pcl-1.8",
-                "/opt/ros/melodic/include"
-               
+                "/opt/ros/melodic/include",
+                "/usr/include/vtk-6.3"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
