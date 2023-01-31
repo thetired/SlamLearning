@@ -62,6 +62,10 @@
         "string": "cpp",
         "string_view": "cpp",
         "csignal": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "condition_variable": "cpp",
+        "forward_list": "cpp",
+        "mutex": "cpp",
+        "variant": "cpp"
     }
 }
