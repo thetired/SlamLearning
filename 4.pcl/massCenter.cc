@@ -38,13 +38,14 @@ int main(int argc, char** argv)
     std::cout<<centroid.transpose()<<std::endl;
 
 
+    // 可视化
     pcl::visualization::PCLVisualizer  viewer;
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud, 0, 255, 0); // green
     viewer.addPointCloud(cloud, single_color);
 	viewer.setBackgroundColor(0, 0, 0);
 
     pcl::PointXYZ c(center[0],center[1],center[2]);
-    viewer.addSphere(c,0.005,1,0,0,"spherer",0);
+    viewer.addSphere(c,0.005,1,12,0,"spherer",0);
 
     while (!viewer.wasStopped())
 	{

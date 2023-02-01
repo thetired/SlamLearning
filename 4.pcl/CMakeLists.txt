@@ -16,9 +16,15 @@ add_executable(massCenter massCenter.cc)
 
 add_executable(boundary  boundary.cc)
 
+add_executable(registration  registration.cc)
+
+
 
 
 target_link_libraries(passThrough ${PCL_LIBRARIES})
 target_link_libraries(massCenter ${PCL_LIBRARIES})
 target_link_libraries(boundary ${PCL_LIBRARIES})
+target_link_libraries(registration ${PCL_LIBRARIES})
+
+
 

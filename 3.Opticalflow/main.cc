@@ -146,7 +146,7 @@ std::cout<<"opencv  success"<<successCount<<std::endl;
 imshow("one level ",img2_single);
 imshow("multi level ",img2_multi);
 imshow("cv   trakced",img2_cv);
- waitKey(0);
+waitKey(0);
 
 }
 
@@ -168,8 +168,6 @@ void OpticalFlowSingleLevel(
 
     parallel_for_(Range(0, kp1.size()),std::bind(&OpticalFlowTracker::calculateOpticalFLow, &tracker,  std::placeholders::_1));
 
-    
-                  
 
 }
 

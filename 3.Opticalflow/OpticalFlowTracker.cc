@@ -36,7 +36,7 @@ namespace
         // for  多层光流用的
         if(this->has_initial)
         {
-            dx = kp2[i].pt.x - kp.pt.x;
+            dx = kp2[i].pt.x - kp.pt.x;         //对于多层金字塔，顶层的初dx dy还是0
             dy = kp2[i].pt.y-kp.pt.y;
         }
 
