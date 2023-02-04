@@ -67,5 +67,6 @@
         "forward_list": "cpp",
         "mutex": "cpp",
         "variant": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }
