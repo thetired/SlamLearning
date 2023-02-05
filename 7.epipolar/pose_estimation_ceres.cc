@@ -109,7 +109,7 @@ int main ( int argc, char** argv )
         float dd = d/5000.0;
         Point2d p1 = pixel2cam ( keypoints_1[m.queryIdx].pt, K );
         pts1_3d.push_back ( Point3f ( p1.x*dd, p1.y*dd, dd ) );
-	pts1_2d.push_back ( keypoints_1[m.queryIdx].pt );
+	    pts1_2d.push_back ( keypoints_1[m.queryIdx].pt );
         pts2_2d.push_back ( keypoints_2[m.trainIdx].pt );
     }
 

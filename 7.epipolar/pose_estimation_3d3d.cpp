@@ -55,9 +55,9 @@ struct CURVE_FITTING_COST
         p_1[0]=p_1[0]+cere_t[0];
         p_1[1]=p_1[1]+cere_t[1];
         p_1[2]=p_1[2]+cere_t[2];
-	residual[0] = T(_p1.x)-p_1[0];
-	residual[1] = T(_p1.y)-p_1[1];
-	residual[2] = T(_p1.z)-p_1[2];
+    residual[0] = T(_p1.x)-p_1[0];
+    residual[1] = T(_p1.y)-p_1[1];
+    residual[2] = T(_p1.z)-p_1[2];
         return true;
     }
     const Point3f _p1, _p2;    //
@@ -156,6 +156,8 @@ void ceres_BA(const vector< Point3f >& pts1,const vector< Point3f >& pts2)
     cout<<"cere_t="<<cere_t[0]<<" "<<cere_t[1]<<" "<<cere_t[2]<<endl;
     //Eigen::AngleAxisd aa(cere_r[0],cere_r[1],cere_r[2]);
     cout<<"cere_r="<<endl<<cere_r[0]<<" "<<cere_r[1]<<" "<<cere_r[2]<<endl<<endl;
+
+    
     double leng=sqrt(cere_r[0]*cere_r[0]+cere_r[1]*cere_r[1]+cere_r[2]*cere_r[2]);
     Eigen::Vector3d zhou(cere_r[0]/leng,cere_r[1]/leng,cere_r[2]/leng);
     Eigen::AngleAxisd aa(leng,zhou);
