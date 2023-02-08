@@ -3,7 +3,10 @@
 #include <boost/format.hpp>
 #include<iostream>
 #include<mutex>
-
+#include "ceres/ceres.h"
+#include "ceres/cubic_interpolation.h"
+   
+   
 using namespace std;
 
 typedef vector<Eigen::Vector2d, Eigen::aligned_allocator<Eigen::Vector2d>> VecVector2d;

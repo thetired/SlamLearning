@@ -1,0 +1,8 @@
+prefix=/home/melodic/SlamLearning/5.ros/devel
+
+Name: tfRead
+Description: Description of tfRead
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

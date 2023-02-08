@@ -172,7 +172,10 @@
     "core": "cpp",
     "csignal": "cpp",
     "any": "cpp",
-    "future": "cpp"
+    "future": "cpp",
+    "memory_resource": "cpp",
+    "random": "cpp",
+    "variant": "cpp"
   },
   "python.autoComplete.extraPaths": [
     "/opt/ros/kinetic/lib/python2.7/dist-packages"
@@ -181,5 +184,6 @@
     "/opt/ros/kinetic/lib/python2.7/dist-packages"
   ],
   "git.ignoreLimitWarning": true,
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "C_Cpp.errorSquiggles": "disabled"
 }
