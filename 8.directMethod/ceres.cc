@@ -99,6 +99,7 @@ public:
         double Z_inv = 1.0 / Z;
         double Z2_inv = Z_inv * Z_inv;
 
+
         residuals[0] = GetPixel(_img1, _px_ref[0], _px_ref[1]) - GetPixel(_img2, u, v);
 
         // 这里如果没有这两个jacobians的判断，就会产生segmentation fault
