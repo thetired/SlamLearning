@@ -54,9 +54,6 @@ int main(int argc, char** argv)
     
         }
     }
-
-
-
      while (!viewer.wasStopped())
 	{
 		viewer.spinOnce(100);
