@@ -22,7 +22,7 @@
 
 * _mm_popcnt_u32(descriptor1[i1][k]^descriptor2[i2][k]); 达到计算汉明距离的作用，SSE指令集  #include <nmmintrin.h>
 
-* **描述子的角度方向：正常角度方向是$\arctan \frac{m01}{m10}$  ，但是我得到sin  和 cos  一样可以用旋转公式取算得对应BRIEF旋转方向，sin cos 不用掉函数，对比邻这种算**
+* **描述子的角度方向：正常角度方向是$$\arctan \frac{m01}{m10}$$  ，但是我得到sin  和 cos  一样可以用旋转公式取算得对应BRIEF旋转方向，sin cos 不用掉函数，对比邻这种算**
 
 
 
