@@ -38,8 +38,19 @@ int main(int argc, char  *argv[])
     //3.实例化 ROS 句柄
     ros::NodeHandle nh;
 
-    //4.实例化 订阅者 对象
-    ros::Subscriber sub = nh.subscribe<std_msgs::String>("chatter",10, std::bind(doMsg,std::placeholders::_1,2,3) );
+    int  x = 4;
+    // 基于lambda实现
+    auto func = [&x](const std_msgs::String::ConstPtr& msg)   
+    {
+        x++;
+        ROS_INFO("我听见:%d",x);
+        ROS_INFO("我听见:%s",msg->data.c_str());
+    };
+
+    ros::Subscriber  sub = nh.subscribe<std_msgs::String>("chatter",10,func);
+
+    //4.实例化 订阅者 对象 ，回调函数只要是一个callable就行 ,使用std::bind来进构建callable
+  //  ros::Subscriber sub = nh.subscribe<std_msgs::String>("chatter",10, std::bind(doMsg,std::placeholders::_1,2,3) );
     //5.处理订阅的消息(回调函数)
 
     //     6.设置循环调用回调函数
