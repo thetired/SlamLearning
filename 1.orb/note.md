@@ -17,12 +17,12 @@
     ```
 
 * drawMatches  和 drawKeyPoint  feature2D 里边提供的函数 可以可视化特征点提取效果和检测效果
-* **Fast角点的尺度不变性靠的是特征金字塔，旋转不变性靠的是描述子 ，称为Oriented Fast**
+* **Fast角点的尺度不变性靠的是特征金字塔，旋转不变性靠的是灰度质心法 ，称为Oriented Fast**
 * ORB提取特征+特征匹配，大部分时间花费再特征提取上
 
 * _mm_popcnt_u32(descriptor1[i1][k]^descriptor2[i2][k]); 达到计算汉明距离的作用，SSE指令集  #include <nmmintrin.h>
 
-* **描述子的角度方向：正常角度方向是$\arctan \frac{m01}{m10}$  ，但是我得到sin  和 cos  一样可以用旋转公式取算得对应BRIEF旋转方向，sin cos 不用掉函数，对比邻这种算**
+* **描述子的角度方向：正常角度方向是$$\arctan \frac{m01}{m10}$$  ，但是我得到sin  和 cos  一样可以用旋转公式取算得对应BRIEF旋转方向，sin cos 不用掉函数，对比邻这种算**
 
 
 
