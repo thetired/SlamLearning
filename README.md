@@ -5,6 +5,7 @@
  3. 手动实现光流
  4. pcl一些API
  5. ROS一些API &&test
- 6. opencv一些API
+ 6. cv模块
  7. 视觉里程计
  8. 直接法
+ 9. 激光SLAM一次测试
