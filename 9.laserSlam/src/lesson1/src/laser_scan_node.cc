@@ -3,7 +3,6 @@
 
 
 //声明一个类
-// c++11 aa
 
 class LaserScan
 {
@@ -20,7 +19,7 @@ class LaserScan
         void  ScanCallback(const sensor_msgs::LaserScan::ConstPtr & scan_msg);
 };
 
-//选择在构造函数中初始哈u subscriber
+//选择在构造函数中初始化 subscriber 
 LaserScan::LaserScan()
 {
     ROS_INFO_STREAM("LaserScan initial .");

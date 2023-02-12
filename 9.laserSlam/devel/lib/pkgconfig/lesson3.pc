@@ -1,0 +1,8 @@
+prefix=/home/melodic/SlamLearning/9.laserSlam/devel
+
+Name: lesson3
+Description: Description of lesson3
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

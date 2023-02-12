@@ -190,7 +190,6 @@ bool poseEstimationDirectCeres( const cv::Mat &img1,
                                                         img2,
                                                         px_ref[i],
                                                         depth_ref[i]);
-
         problem.AddResidualBlock(costFunction,NULL, pose);
     }
     cout << "设置parameter\n";

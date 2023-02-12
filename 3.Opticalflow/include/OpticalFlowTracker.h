@@ -27,8 +27,6 @@ class OpticalFlowTracker
                 void test();
 
 
-       
-
 
 
     private:
