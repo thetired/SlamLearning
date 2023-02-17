@@ -67,7 +67,7 @@ set(lesson5_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(lesson5_SOURCE_PREFIX /home/melodic/SlamLearning/9.laserSlam/src/lesson4)
+  set(lesson5_SOURCE_PREFIX /home/melodic/SlamLearning/9.laserSlam/src/lesson5)
   set(lesson5_DEVEL_PREFIX /home/melodic/SlamLearning/9.laserSlam/devel)
   set(lesson5_INSTALL_PREFIX "")
   set(lesson5_PREFIX ${lesson5_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(lesson5_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/melodic/SlamLearning/9.laserSlam/src/lesson4/include " STREQUAL " ")
+if(NOT "/home/melodic/SlamLearning/9.laserSlam/src/lesson5/include " STREQUAL " ")
   set(lesson5_INCLUDE_DIRS "")
-  set(_include_dirs "/home/melodic/SlamLearning/9.laserSlam/src/lesson4/include")
+  set(_include_dirs "/home/melodic/SlamLearning/9.laserSlam/src/lesson5/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/melodic/SlamLearning/9.laserSlam/src/lesson4/include " STREQUAL " 
         message(FATAL_ERROR "Project 'lesson5' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'lesson5' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/melodic/SlamLearning/9.laserSlam/src/lesson4/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'lesson5' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/melodic/SlamLearning/9.laserSlam/src/lesson5/${idir}'.  ${_report}")
     endif()
     _list_append_unique(lesson5_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/melodic/SlamLearning/9.laserSlam/devel/lib;/home/melodic/SlamLearning/9.laserSlam/devel/lib;/home/melodic/cat/cartographer_detailed_comments_ws/install_isolated/lib;/opt/ros/melodic/lib)
+    foreach(path /home/melodic/SlamLearning/9.laserSlam/devel/lib;/home/melodic/cat/cartographer_detailed_comments_ws/install_isolated/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${lesson5_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "nav_msgs;roscpp;sensor_msgs;nav_msgs;tf")
+set(depends "nav_msgs;roscpp;sensor_msgs;tf;tf_conversions;laser_geometry")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

@@ -1,0 +1,8 @@
+prefix=/home/melodic/SlamLearning/9.laserSlam/devel
+
+Name: lesson5_map
+Description: Description of lesson5_map
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
