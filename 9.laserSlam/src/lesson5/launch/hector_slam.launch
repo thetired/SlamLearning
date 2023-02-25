@@ -12,7 +12,7 @@
         args="0 0 0.254 0 0 3.1415926 base_link front_laser_link 50" />
 
     <!-- 启动 hector_slam  -->
-    <node pkg="lesson4" type="lesson4_hector_slam_node" name="lesson4_hector_slam_node" output="screen">
+    <node pkg="lesson5" type="lesson5_hector_slam_node" name="lesson4_hector_slam_node" output="screen">
         <param name="pub_map_baselink_tf" value="true"/>
         <param name="pub_map_odom_tf" value="true"/>
         <param name="pub_odometry_topic" value="true"/>
@@ -34,7 +34,7 @@
     
     <!-- launch rviz -->
     <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d $(find lesson4)/config/hector_slam.rviz" />
+        args="-d $(find lesson5)/config/hector_slam.rviz" />
 
     <!-- play bagfile -->
     <node name="playbag" pkg="rosbag" type="play"

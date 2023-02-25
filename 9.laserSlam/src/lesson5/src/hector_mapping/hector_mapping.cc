@@ -32,8 +32,9 @@ HectorMapping::HectorMapping() : private_node_("~")
     InitParams();
     
     // 地图始终存在
-    // hector_map_ = new hectorslam::GridMap(resolution_, map_size_, offset_);
+    hector_map_ = new hectorslam::GridMap(resolution_, map_size_, offset_);
 }
+
 
 HectorMapping::~HectorMapping()
 {
@@ -91,7 +92,7 @@ void HectorMapping::ScanCallback(const sensor_msgs::LaserScan &scan)
     start_time_ = std::chrono::steady_clock::now();
 
     // 当雷达数据到来时新建地图
-    hector_map_ = new hectorslam::GridMap(resolution_, map_size_, offset_);
+    //hector_map_ = new hectorslam::GridMap(resolution_, map_size_, offset_);
 
     end_time_ = std::chrono::steady_clock::now();
     time_used_ = std::chrono::duration_cast<std::chrono::duration<double>>(end_time_ - start_time_);
@@ -127,7 +128,7 @@ void HectorMapping::ScanCallback(const sensor_msgs::LaserScan &scan)
     // 4 析构与释放内存空间
     start_time_ = std::chrono::steady_clock::now();
 
-    delete hector_map_;
+    //delete hector_map_;
 
     end_time_ = std::chrono::steady_clock::now();
     time_used_ = std::chrono::duration_cast<std::chrono::duration<double>>(end_time_ - start_time_);

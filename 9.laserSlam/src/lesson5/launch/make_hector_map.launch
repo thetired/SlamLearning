@@ -3,18 +3,18 @@
 <launch>
 
     <!-- bag的地址与名称 -->
-    <arg name="bag_filename" default="/home/lx/bagfiles/lesson1.bag"/>
+    <arg name="bag_filename" default="/home/melodic/dataset/lesson1.bag"/>
 
     <!-- 使用bag的时间戳 -->
     <param name="use_sim_time" value="true" />
 
     <!-- 启动节点 -->
     <node name="lesson4_hector_mapping_node"
-        pkg="lesson4" type="lesson4_hector_mapping_node" output="screen" />
+        pkg="lesson5" type="lesson5_hector_mapping_node" output="screen" />
     
     <!-- launch rviz -->
     <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d $(find lesson4)/config/hector_mapping.rviz" />
+        args="-d $(find lesson5)/config/hector_mapping.rviz" />
 
     <!-- play bagfile -->
     <node name="playbag" pkg="rosbag" type="play"
