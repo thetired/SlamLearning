@@ -38,7 +38,6 @@ int main(int argc, char** argv)
     std::cout<<cloud->size()<<std::endl;
     std::cout<<boundaries.size()<<std::endl;
 
-
 //可视化
     pcl::visualization::PCLVisualizer  viewer;
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud, 0, 255, 0); // green

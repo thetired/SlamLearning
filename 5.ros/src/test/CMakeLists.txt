@@ -135,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(pub src/1.callback/pub.cc)
 add_executable(sub src/1.callback/sub.cc)
+add_executable(msg src/2.rosMessage/main.cc)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,6 +152,9 @@ target_link_libraries( pub
   ${catkin_LIBRARIES}
 )
 target_link_libraries( sub
+  ${catkin_LIBRARIES}
+)
+target_link_libraries( msg
   ${catkin_LIBRARIES}
 )
 

@@ -23,6 +23,7 @@ public:
   virtual void setToOriginImpl() override {
     _estimate << 0, 0, 0;
   }
+  
 
   // 更新
   virtual void oplusImpl(const double *update) override {
