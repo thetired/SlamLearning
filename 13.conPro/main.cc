@@ -73,6 +73,9 @@ private:
 
 int main()
 {
+
+    cout<<"aaaaaaaaaaaaaaaaaaaaaa"<<2+ \
+    3<<endl;
     SyncQueue taskQ(50);
     auto produce = bind(&SyncQueue::put, &taskQ, placeholders::_1);
     auto consume = bind(&SyncQueue::take, &taskQ);

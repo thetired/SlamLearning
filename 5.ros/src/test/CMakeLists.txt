@@ -11,7 +11,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  tf
+  nav_msgs
 )
+find_package(PCL REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -136,6 +140,12 @@ include_directories(
 add_executable(pub src/1.callback/pub.cc)
 add_executable(sub src/1.callback/sub.cc)
 add_executable(msg src/2.rosMessage/main.cc)
+add_executable(odom src/3.odom/main.cc)
+add_executable(point_test src/4.pointcloud/main.cc)
+add_executable(path_test src/5.path/main.cc)
+
+
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -156,6 +166,15 @@ target_link_libraries( sub
 )
 target_link_libraries( msg
   ${catkin_LIBRARIES}
+)
+target_link_libraries( odom
+  ${catkin_LIBRARIES}
+)
+target_link_libraries( point_test
+  ${catkin_LIBRARIES}  ${PCL_LIBRARIES}
+)
+target_link_libraries(  path_test
+  ${catkin_LIBRARIES}  
 )
 
 #############

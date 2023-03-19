@@ -15,13 +15,13 @@
         args="0 0 0.254 0 0 3.1415926 base_link front_laser_link" />
 
     <!-- 启动节点 -->
-    <node name="lesson5_lidar_undistortion_node" pkg="lesson5" type="lesson5_lidar_undistortion_node" output="screen" >
-         <rosparam file="$(find lesson5)/config/lidar_undistortion.yaml" command="load"/>
+    <node name="lesson5_lidar_undistortion_node" pkg="lesson4" type="lesson4_lidar_undistortion_node" output="screen" >
+         <rosparam file="$(find lesson4)/config/lidar_undistortion.yaml" command="load"/>
     </node>
 
     <!-- launch rviz -->
     <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d $(find lesson5)/config/lidar_undistortion.rviz" />
+        args="-d $(find lesson4)/config/lidar_undistortion.rviz" />
 
     <!-- play bagfile -->
     <node name="playbag" pkg="rosbag" type="play"
