@@ -1,0 +1,29 @@
+<launch>
+<!-- 使用bag播放数据 -->
+  <param name="/use_sim_time" value="true" />
+  <!-- bag 文件地址 -->
+  <arg  name="bag_filename" default="/home/melodic/dataset/5_floor.bag"/>
+  <!-- 启动cartographer结点 -->
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find cartographer_ros)/configuration_files
+          -configuration_basename wyl_test.lua"
+      output="screen">
+      <!-- 话题重映射 -->
+    <remap from="scan" to="scan" />
+    <remap from="imu" to="imu" />
+    <remap from="odom" to="odom" />
+  </node>
+
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find cartographer_ros)/configuration_files/my_rviz.rviz" />
+        <!-- 启动rviz -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find cartographer_ros)/configuration_files/lx_2d.rviz" /> -->
+      <!-- 4x  bag文件 -->
+    <node name="playbag" pkg="rosbag" type="play"
+      args="--clock  -r 4 $(arg bag_filename)"/>
+</launch>
