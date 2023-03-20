@@ -143,6 +143,10 @@ add_executable(msg src/2.rosMessage/main.cc)
 add_executable(odom src/3.odom/main.cc)
 add_executable(point_test src/4.pointcloud/main.cc)
 add_executable(path_test src/5.path/main.cc)
+add_executable(points_and_lines src/6.marker/main.cc)
+add_executable(words src/6.marker/word.cc)
+
+
 
 
 
@@ -174,6 +178,12 @@ target_link_libraries( point_test
   ${catkin_LIBRARIES}  ${PCL_LIBRARIES}
 )
 target_link_libraries(  path_test
+  ${catkin_LIBRARIES}  
+)
+target_link_libraries(  points_and_lines
+  ${catkin_LIBRARIES}  
+)
+target_link_libraries(  words
   ${catkin_LIBRARIES}  
 )
 
